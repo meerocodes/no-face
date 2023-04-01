@@ -13,7 +13,9 @@ const Main = () => {
                         </aside>
                         
                         <img src={tShirt} alt =' no face club t shirt'></img>
-                        <button>PRE-ORDER</button>
+                        <div className="button">
+                            <button>PRE-ORDER</button>
+                        </div>
                     </div>
                 </section>
             </main>

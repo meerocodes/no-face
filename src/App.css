@@ -1,3 +1,17 @@
+/* TYPOGRAPHY */
+@font-face {
+  font-family: 'AnotherTag';
+  src: url('../fonts/another_tag/aAnotherTag.ttf') format('truetype');
+  /* Add other font styles (e.g. bold, italic) and formats (e.g. woff, woff2) as needed */
+}
+
+h1 {
+  font-family: 'AnotherTag', sans-serif;
+  font-size: clamp(2rem,5vw, 4rem);
+  color: white;
+}
+/*  */
+
 .wrapper {
   margin: 0 auto;
   width: 85%;
@@ -11,29 +25,53 @@
   height: 100vh;
 }
 /* Nav */
+nav h1 {
+  width: 25%;
+}
 nav .wrapper {
   justify-content: space-between;
   display: flex;
   align-items: center;
 }
 nav img{
-  width: 20%;
+  width: 25%;
 }
 .socials {
   color: white;
+  width: 25%;
 }
 
 
 /* Main */
+.main{
+  height: 50vh;
+  margin-top: 50px;
+}
 
-main .wrapper {
+.main .wrapper {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
 }
+main aside {
+  width: 25%;
+}
 main p {
   color: red;
+}
+main img {
+  width: 25%;
+  flex-grow: 2;
+}
+main img:hover {
+  content: url('./assets/noFace3dRender.gif');
+  width: 25%;
+  flex-grow: 2;
+}
+main .button {
+  width: 25%;
 }
 button{
   width: 150px;

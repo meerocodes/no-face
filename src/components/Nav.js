@@ -8,7 +8,7 @@ const Nav = () => {
         <header>
             <nav>
                 <div className="wrapper">
-                    <img src={h1} alt="no Face Club in caligraphy"/>
+                    <h1>NOFACECLUB</h1>
                     <img src={logo} alt="Logo" />
                     <div className="socials">social icons here</div>
                 </div>
