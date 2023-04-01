@@ -1,6 +1,5 @@
 import React from "react";
 import logo from '../assets/logo.png';
-import h1 from "../assets/noFaceClubImg.png"
 
 
 const Nav = () => {
