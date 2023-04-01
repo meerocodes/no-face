@@ -1,4 +1,5 @@
-import tShirt from '../assets/T-Shirt.png'
+import tShirt from '../assets/noFace3dRender.gif';
+
 const Main = () => {
     return (
         <>
@@ -11,8 +12,9 @@ const Main = () => {
                             <p>OVERSIZED DROP SHOULDER FIT</p>
                             <p>ART ON YOUR BACK.</p>
                         </aside>
-                        
-                        <img src={tShirt} alt =' no face club t shirt'></img>
+                            <div className="imgContai">
+                                <img src={tShirt} alt =' no face club t shirt'></img>
+                            </div>
                         <div className="button">
                             <button>PRE-ORDER</button>
                         </div>

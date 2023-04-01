@@ -25,6 +25,9 @@ h1 {
   height: 100vh;
 }
 /* Nav */
+nav {
+  min-height: 20vh;
+}
 nav h1 {
   width: 25%;
 }
@@ -44,7 +47,7 @@ nav img{
 
 /* Main */
 .main{
-  height: 50vh;
+  height: 60vh;
   margin-top: 50px;
 }
 
@@ -57,18 +60,23 @@ nav img{
 }
 main aside {
   width: 25%;
+  flex-grow: 1;
 }
 main p {
   color: red;
+  text-shadow: 0 0 8px black;
+  font-size: clamp(.6rem, 2vw, 1rem);
 }
 main img {
-  width: 25%;
-  flex-grow: 2;
+  width: 90%;
+  flex-grow: 1.5;
+  margin-top: 5px;
+  position: relative;
 }
 main img:hover {
   content: url('./assets/noFace3dRender.gif');
-  width: 25%;
-  flex-grow: 2;
+  flex-grow: 1;
+  
 }
 main .button {
   width: 25%;
@@ -83,4 +91,23 @@ button{
 button:hover{
   transform: scale(1.1);
   box-shadow: 0 0 20px red;
+}
+
+
+
+
+
+
+
+
+@media (max-width:800px){
+  nav {
+    height: 100px;
+  }
+  main .wrapper{
+    flex-direction: column;
+  }
+  .shirtDetails {
+    width: 75%;
+  }
 }
