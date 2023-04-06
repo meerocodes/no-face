@@ -60,7 +60,7 @@ nav img{
 
 /* Main */
 .main{
-  min-height: 60vh;
+  min-height: 100vh;
   margin-top: 50px;
 }
 
@@ -125,7 +125,7 @@ button:hover{
 
 /* LANDING PAGE STYLES */
 .landingPage{
-  height: 90vh;
+  min-height: 90vh;
 
 }
 .landingPage .wrapper {
@@ -136,7 +136,7 @@ button:hover{
   align-self: center;
 }
 .landingPage .wrapper button {
- width: 60%;
+ width: 30%;
  display: inline-block;
 }
 
@@ -146,10 +146,13 @@ button:hover{
 }
 .wrapper h2{
   font-family: 'AnotherTag';
-  font-size: clamp(1.5rem,5vw, 4rem);
+  font-size: clamp(2rem,5vw, 6rem);
+}
+.wrapper h3{
+  font-family: 'Space';
+  font-size: clamp(1rem,5vw, 2rem);
 }
 form{
-  margin-top: 50px;
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
@@ -164,9 +167,8 @@ label {
 
 input {
   background-color: transparent;
-  
   color: white;
-  width: 20%;
+  width: 38%;
   padding: 10px;
   border: 1px solid white;
   margin-bottom: 15px;

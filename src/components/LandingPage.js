@@ -9,7 +9,7 @@ const LandingPage = () => {
                     <input type="tel" id="phone" name="phone" placeholder="Phone number:" required/>
 
                     <label for="email" className="sr-only">Email address:</label>
-                    <input type="email" id="email" name="email" placeholder="Email address" requried/>
+                    <input type="email" id="email" name="email" placeholder="Email address" required/>
 
                     <button type="submit">Submit</button>
                 </form>
