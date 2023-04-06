@@ -1,4 +1,5 @@
 import tShirt from '../assets/noFace3dRender.gif';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
     return (
@@ -12,6 +13,9 @@ const Main = () => {
                             <p>265 GSM</p>
                             <p>OVERSIZED DROP SHOULDER FIT</p>
                             <p>ART ON YOUR BACK.</p>
+                            <Link to='/joinTheRevolution'>
+                            <button>view landing</button>
+                            </Link>
                         </aside>
                             <div className="imgContainer">
                                 <img src={tShirt} alt =' no face club t shirt'></img>
