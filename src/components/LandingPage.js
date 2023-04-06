@@ -6,10 +6,10 @@ const LandingPage = () => {
                 <h2>JOIN THE REVOLUTION</h2>
                 <form>
                     <label for="phone" className="sr-only">Phone number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Phone number:"/>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone number:" required/>
 
                     <label for="email" className="sr-only">Email address:</label>
-                    <input type="email" id="email" name="email" placeholder="Email address"/>
+                    <input type="email" id="email" name="email" placeholder="Email address" requried/>
 
                     <button type="submit">Submit</button>
                 </form>
