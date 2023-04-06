@@ -7,12 +7,13 @@ const Main = () => {
                 <section className="main">
                     <div className="wrapper">
                         <aside className="shirtDetails">
+                            <h3>" PRE - FACE "</h3>
                             <p>100% COTTON</p>
                             <p>265 GSM</p>
                             <p>OVERSIZED DROP SHOULDER FIT</p>
                             <p>ART ON YOUR BACK.</p>
                         </aside>
-                            <div className="imgContai">
+                            <div className="imgContainer">
                                 <img src={tShirt} alt =' no face club t shirt'></img>
                             </div>
                         <div className="button">
