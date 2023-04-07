@@ -1,9 +1,15 @@
+import tShirt from '../assets/noFace3dRender.gif';
+
+
 const LandingPage = () => {
     return(
         <section className="landingPage">
             <div className="wrapper">
-                <h3>ARC 1</h3>
+                <h3>【ARC 1】</h3>
                 <h2>JOIN THE REVOLUTION</h2>
+                <div className="imgContainer">
+                    <img src={tShirt} alt =' no face club t shirt 3d render'></img>
+                </div>
                 <form>
                     <label for="phone" className="sr-only">Phone number:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Phone number:" required/>

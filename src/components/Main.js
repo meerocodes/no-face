@@ -18,7 +18,7 @@ const Main = () => {
                             </Link>
                         </aside>
                             <div className="imgContainer">
-                                <img src={tShirt} alt =' no face club t shirt'></img>
+                                <img src={tShirt} alt =' no face club t shirt 3d render'></img>
                             </div>
                         <div className="button">
                             <button>PRE-ORDER</button>
