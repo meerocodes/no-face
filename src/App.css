@@ -60,6 +60,17 @@ nav img{
 }
 
 
+/* LANDING PAGE STYLES */
+
+
+.landing img{
+  height: auto;
+  width: 100%;
+  
+
+}
+
+
 /* Main */
 .main{
   min-height: 100vh;
@@ -127,36 +138,36 @@ button:hover{
 
 
 
-/* LANDING PAGE STYLES */
-.landingPage{
+/* PREORDER PAGE STYLES */
+.preOrder{
   min-height: 90vh;
 
 }
-.landingPage h3 {
+.preOrder h3 {
   font-family: "Space";
   color: #b6b6b6;
 }
-.landingPage .wrapper {
+.preOrder .wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-self: center;
 }
-.landingPage .wrapper button {
+.preOrder .wrapper button {
  width: 30%;
  display: inline-block;
 }
-.landingPage .wrapper img {
+.preOrder .wrapper img {
   width: 70%;
 }
 
 /* FORM STYLES */
-.landingPage h2, h3{
+.preOrder h2, h3{
   color:white;
   margin: 0;
 }
-.landingPage h2{
+.preOrder h2{
   font-family: 'AnotherTag';
   font-size: clamp(2rem,5vw, 6rem);
   font-weight: 500;

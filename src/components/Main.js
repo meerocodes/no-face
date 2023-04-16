@@ -1,9 +1,12 @@
 import tShirt from '../assets/noFace3dRender.gif';
 import { Link } from 'react-router-dom';
+import Nav from './Nav';
 
 const Main = () => {
     return (
         <>
+              <Nav/>
+
             <main>
                 <section className="main">
                     <div className="wrapper">

@@ -1,17 +1,20 @@
 import './App.css';
 import Home from './components/Home';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './components/LandingPage';
+import PreOrderPage from './components/PreOrderPage';
 import Nav from './components/Nav';
+import LandingPage from './components/LandingPage';
 
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
+
       <Routes>
-        <Route path='/joinTheRevolution' element={<LandingPage/>}/>
-        <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<LandingPage/>}/>
+
+        <Route path='/joinTheRevolution' element={<PreOrderPage/>}/>
+        <Route path='/home' element={<Home/>}/>
       </Routes>
     </div>
   );
