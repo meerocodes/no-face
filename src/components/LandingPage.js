@@ -1,5 +1,4 @@
 import logo3d from '../assets/logoRender.gif'
-import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     return(
