@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
 
 class ShopifyBuyButton extends Component {
   constructor(props) {
     super(props);
     this.productRef = React.createRef();
-    this.state = {
-      sdkLoaded: false,
-    };
   }
 
   componentDidMount() {
-    if (window.ShopifyBuy && window.ShopifyBuy.UI) {
-      this.setState({ sdkLoaded: true }, this.initializeBuyButton);
-    } else {
-      window.addEventListener('shopify_buy_loaded', () => {
-        this.setState({ sdkLoaded: true }, this.initializeBuyButton);
-      });
-    }
+    this.loadShopifySDK().then(() => {
+      this.initializeBuyButton();
+    });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('shopify_buy_loaded', () => {
-      this.setState({ sdkLoaded: true }, this.initializeBuyButton);
+  loadShopifySDK() {
+    return new Promise((resolve) => {
+      if (window.ShopifyBuy && window.ShopifyBuy.UI) {
+        resolve();
+      } else {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        script.onload = () => {
+          resolve();
+        };
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      }
     });
   }
 
@@ -181,30 +183,13 @@ class ShopifyBuyButton extends Component {
                 },
             }
         }
-    },   
+    }
             });
           });
         };
       
         render() {
-          const { sdkLoaded } = this.state;
-      
-          return (
-            <>
-              {!sdkLoaded && (
-                <Helmet>
-                  <script
-                    async
-                    src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"
-                    onLoad={() => {
-                      window.dispatchEvent(new Event('shopify_buy_loaded'));
-                    }}
-                  />
-                </Helmet>
-              )}
-              <div id="product-component-1681879189619" ref={this.productRef}></div>
-            </>
-          );
+          return <div id="product-component-1681879189619" ref={this.productRef}></div>;
         }
       }
       
