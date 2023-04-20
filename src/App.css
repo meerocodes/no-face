@@ -176,29 +176,8 @@ button:hover{
   font-family: 'Space';
   font-size: clamp(1rem,5vw, 2rem);
 }
-form{
-  margin-top:50px;
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-label {
- 
-  margin-bottom: 5px;
+.shopify-buy__product__title{
   color: white;
-}
-
-input {
-  background-color: transparent;
-  font-size:clamp(.6rem,2vw,3rem);
-  color: white;
-  width: 38%;
-  padding: 10px;
-  border: 1px solid white;
-  margin-bottom: 15px;
-  box-sizing: border-box;
 }
 
 @media (max-width:900px){
