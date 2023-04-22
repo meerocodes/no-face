@@ -162,6 +162,12 @@ button:hover{
   width: 70%;
 }
 
+.buyButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* FORM STYLES */
 .preOrder h2, h3{
   color:white;

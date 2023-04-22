@@ -1,45 +1,37 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-class ShopifyBuyButton extends Component {
-  constructor(props) {
-    super(props);
-    this.productRef = React.createRef();
-  }
+const ShopifyBuyButton = () => {
+  const productRef = useRef();
 
-  componentDidMount() {
-    this.loadShopifySDK().then(() => {
-      this.initializeBuyButton();
-    });
-  }
-
-  loadShopifySDK() {
-    return new Promise((resolve) => {
-      if (window.ShopifyBuy && window.ShopifyBuy.UI) {
-        resolve();
-      } else {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-        script.onload = () => {
+  useEffect(() => {
+    const loadShopifySDK = () => {
+      return new Promise((resolve) => {
+        if (window.ShopifyBuy && window.ShopifyBuy.UI) {
           resolve();
-        };
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-      }
-    });
-  }
+        } else {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+          script.onload = () => {
+            resolve();
+          };
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        }
+      });
+    };
 
-  initializeBuyButton = () => {
-    const client = window.ShopifyBuy.buildClient({
-      domain: 'nofaceclub.myshopify.com',
-      storefrontAccessToken: 'bebbe31a4432498067834a098145e689',
-    });
+    const initializeBuyButton = () => {
+      const client = window.ShopifyBuy.buildClient({
+        domain: 'nofaceclub.myshopify.com',
+        storefrontAccessToken: 'bebbe31a4432498067834a098145e689',
+      });
 
-    window.ShopifyBuy.UI.onReady(client).then((ui) => {
-      ui.createComponent('product', {
-        id: '6959503802465',
-        node: this.productRef.current,
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
+      window.ShopifyBuy.UI.onReady(client).then((ui) => {
+        ui.createComponent('product', {
+          id: '6959503802465',
+          node: productRef.current,
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
             "product": {
                 "styles": {
                   "product": {
@@ -187,11 +179,20 @@ class ShopifyBuyButton extends Component {
             });
           });
         };
+        loadShopifySDK().then(() => {
+            initializeBuyButton();
+          });
       
-        render() {
-          return <div id="product-component-1681879189619" ref={this.productRef}></div>;
-        }
-      }
+          // Cleanup function to prevent multiple instances
+          return () => {
+            if (productRef.current) {
+              productRef.current.innerHTML = '';
+            }
+          };
+        }, []); // Empty dependency array to ensure the effect runs only once
+      
+        return <div id="product-component-1681879189619" ref={productRef}></div>;
+      };
       
       export default ShopifyBuyButton;
 
