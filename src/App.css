@@ -40,7 +40,7 @@ html{
 }
 /* Nav */
 nav {
-  min-height: 50px;
+  min-height: 20vh;
 }
 nav h1 {
   width: 25%;
@@ -140,7 +140,7 @@ button:hover{
 
 /* PREORDER PAGE STYLES */
 .preOrder{
-  min-height: 90vh;
+  min-height: 80vh;
 
 }
 .preOrder h3 {
@@ -163,9 +163,11 @@ button:hover{
 }
 
 .buyButton{
+  min-height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 25px;
 }
 
 /* FORM STYLES */
@@ -213,5 +215,11 @@ button:hover{
   }
   .shirtDetails {
     width: 75%;
+  }
+  .imgContainer{
+    min-height: 50vh;
+  }
+  .preOrder .wrapper img{
+    width:100%;
   }
 }
