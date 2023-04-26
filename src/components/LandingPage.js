@@ -6,7 +6,7 @@ const LandingPage = () => {
         <section className="landing">
 
                 <Link to='/'><img src={logo3d} alt ='no face logo 3d render gif'></img></Link>
-                <Link to='/' className='enterLink'>ENTER &nbsp;  ▶︎ </Link>
+                <Link to='/preOrder' className='enterLink'>ENTER &nbsp;  ▶︎ </Link>
 
 
 
