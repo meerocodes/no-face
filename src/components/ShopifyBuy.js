@@ -45,14 +45,16 @@ const ShopifyBuyButton = () => {
                     "color": "#ffffff"
                   },
                   "button": {
-                    "padding":" 3px 10px",
+                    "padding":" 8px 30px",
                     "color": "#E50914",
                     "background-color": "transparent",
+                    "font-weight":"700",
+                    "border":" 1px solid #fcb4b4",
                     ":hover": {
                       "color": "#f9f9f9",
                       "background-color": "#E50914"
                     },
-                    "box-shadow": "0 0 2px #fcb4b4",
+                    "box-shadow": "0 0 0px #fcb4b4",
                     ":focus": {
                       "background-color": "#ce0812"
                     }
@@ -99,7 +101,8 @@ const ShopifyBuyButton = () => {
                     "color": "#f9f9f9",
                     ":hover": {
                       "color": "#f9f9f9",
-                      "background-color": "#ce0812"                    },
+                      "background-color": "#ce0812"                    
+                    },
                     "background-color": "#e50914",
                     ":focus": {
                       "background-color": "#ce0812"
