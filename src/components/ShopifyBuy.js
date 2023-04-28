@@ -45,12 +45,14 @@ const ShopifyBuyButton = () => {
                     "color": "#ffffff"
                   },
                   "button": {
-                    "color": "#f9f9f9",
+                    "padding":" 3px 10px",
+                    "color": "#E50914",
+                    "background-color": "transparent",
                     ":hover": {
                       "color": "#f9f9f9",
-                      "background-color": "#ce0812"
+                      "background-color": "#E50914"
                     },
-                    "background-color": "#e50914",
+                    "box-shadow": "0 0 2px #fcb4b4",
                     ":focus": {
                       "background-color": "#ce0812"
                     }
@@ -66,7 +68,7 @@ const ShopifyBuyButton = () => {
                   }
                 },
                 "text": {
-                  "button": "Add to cart"
+                  "button": "Pre - Order"
                 }
               },
               "productSet": {
@@ -97,8 +99,7 @@ const ShopifyBuyButton = () => {
                     "color": "#f9f9f9",
                     ":hover": {
                       "color": "#f9f9f9",
-                      "background-color": "#ce0812"
-                    },
+                      "background-color": "#ce0812"                    },
                     "background-color": "#e50914",
                     ":focus": {
                       "background-color": "#ce0812"

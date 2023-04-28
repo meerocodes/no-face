@@ -43,6 +43,9 @@ html{
   background-position:center; 
 }
 /* Nav */
+nav a {
+  width:25%;
+}
 nav {
   min-height: 20vh;
 }
@@ -56,7 +59,7 @@ nav .wrapper {
   align-items: center;
 }
 nav img{
-  width: 20%;
+  width: 100%;
 }
 .socials {
   color: white;
@@ -198,8 +201,13 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
+.buyButton html .shopify-buy__layout-vertical .shopify-buy__btn-wrapper{
+  margin-top: 15px;
+
+}
+
 
 /* FORM STYLES */
 .preOrder h2, h3{

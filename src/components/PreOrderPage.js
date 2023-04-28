@@ -1,4 +1,4 @@
-import tShirt from '../assets/noFace3dRender.gif';
+import tShirt from '../assets/noFace3dRender-compressed.gif';
 import Nav from './Nav';
 import ShopifyBuyButton from './ShopifyBuy';
 
