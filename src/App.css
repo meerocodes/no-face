@@ -140,7 +140,6 @@ main p {
 }
 main img {
   width: 100%;
-  margin-top: 5px;
   position: relative;
 }
 main .imgContainer{
@@ -193,7 +192,8 @@ button:hover{
  display: inline-block;
 }
 .preOrder .wrapper img {
-  width: 70%;
+  margin-top: -50px;
+  width: 50%;
 }
 
 .buyButton{
@@ -207,6 +207,13 @@ button:hover{
   margin-top: 15px;
 
 }
+.shopify-product select {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid #fcb4b4;
+}
+
 
 
 /* FORM STYLES */
@@ -280,6 +287,17 @@ button:hover{
 .modalButton:hover {
   background-color: #3e8e41;
 }
+
+/* COUNTDOWN */
+
+.countDown{
+  color: white;
+  font-family: 'Space';
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+
 
 
 /* MEDIA QUERIES */

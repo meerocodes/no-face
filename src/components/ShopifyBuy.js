@@ -32,171 +32,99 @@ const ShopifyBuyButton = () => {
           node: productRef.current,
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
-            "product": {
-                "styles": {
-                  "product": {
-                    "@media (min-width: 601px)": {
-                      "max-width": "calc(25% - 20px)",
-                      "margin-left": "20px",
-                      "margin-bottom": "50px"
-                    }
+            product: {
+              styles: {
+                product: {
+                  '@media (min-width: 601px)': {
+                    'max-width': 'calc(25% - 20px)',
+                    'margin-left': '20px',
+                    'margin-bottom': '50px',
                   },
-                  "title": {
-                    "color": "#ffffff"
-                  },
-                  "button": {
-                    "padding":" 8px 30px",
-                    "color": "#E50914",
-                    "background-color": "transparent",
-                    "font-weight":"700",
-                    "border":" 1px solid #fcb4b4",
-                    ":hover": {
-                      "color": "#f9f9f9",
-                      "background-color": "#E50914"
-                    },
-                    "box-shadow": "0 0 0px #fcb4b4",
-                    ":focus": {
-                      "background-color": "#ce0812"
-                    }
-                  },
-                  "price": {
-                    "color": "#f5f5f5"
-                  },
-                  "compareAt": {
-                    "color": "#f5f5f5"
-                  },
-                  "unitPrice": {
-                    "color": "#f5f5f5"
-                  }
                 },
-                "text": {
-                  "button": "Pre - Order"
-                }
+                title: {
+                  color: '#ffffff',
+                },
+                button: {
+                  padding: '8px 30px',
+                  color: '#E50914',
+                  'background-color': 'transparent',
+                  'font-weight': '700',
+                  border: '1px solid #fcb4b4',
+                  ':hover': {
+                    color: '#f9f9f9',
+                    'background-color': '#E50914',
+                  },
+                  'box-shadow': '0 0 0px #fcb4b4',
+                  ':focus': {
+                    'background-color': '#ce0812',
+                  },
+                },
+                price: {
+                  color: '#f5f5f5',
+                },
+                compareAt: {
+                  color: '#f5f5f5',
+                },
+                unitPrice: {
+                  color: '#f5f5f5',
+                },
               },
-              "productSet": {
-                "styles": {
-                  "products": {
-                    "@media (min-width: 601px)": {
-                      "margin-left": "-20px"
-                    }
-                  }
-                }
+              text: {
+                button: 'Pre - Order',
               },
-              "modalProduct": {
-                "contents": {
-                  "img": false,
-                  "imgWithCarousel": true,
-                  "button": false,
-                  "buttonWithQuantity": true
+            },
+            cart: {
+              styles: {
+                button: {
+                  color: '#f9f9f9',
+                  ':hover': {
+                    color: '#f9f9f9',
+                    'background-color': '#ce0812',
+                  },
+                  'background-color': '#e50914',
+                  ':focus': {
+                    'background-color': '#ce0812',
+                  },
                 },
-                "styles": {
-                  "product": {
-                    "@media (min-width: 601px)": {
-                      "max-width": "100%",
-                      "margin-left": "0px",
-                      "margin-bottom": "0px"
-                    }
-                  },
-                  "button": {
-                    "color": "#f9f9f9",
-                    ":hover": {
-                      "color": "#f9f9f9",
-                      "background-color": "#ce0812"                    
-                    },
-                    "background-color": "#e50914",
-                    ":focus": {
-                      "background-color": "#ce0812"
-                    }
-                  },
-                  "title": {
-                    "font-family": "Helvetica Neue, sans-serif",
-                    "font-weight": "bold",
-                    "font-size": "26px",
-                    "color": "#4c4c4c"
-                  },
-                  "price": {
-                    "font-family": "Helvetica Neue, sans-serif",
-                    "font-weight": "normal",
-                    "font-size": "18px",
-                    "color": "#4c4c4c"
-                  },
-                  "compareAt": {
-                    "font-family": "Helvetica Neue, sans-serif",
-                    "font-weight": "normal",
-                    "font-size": "15.299999999999999px",
-                    "color": "#4c4c4c"
-                  },
-                  "unitPrice": {
-                    "font-family": "Helvetica Neue, sans-serif",
-                    "font-weight": "normal",
-                    "font-size": "15.299999999999999px",
-                    "color": "#4c4c4c"
-                  }
-                },
-                "text": {
-                  "button": "Add to cart"
-                }
               },
-              "option": {},
-              "cart": {
-                "styles": {
-                  "button": {
-                    "color": "#f9f9f9",
-                    ":hover": {
-                      "color": "#f9f9f9",
-                      "background-color": "#ce0812"
-                    },
-                    "background-color": "#e50914",
-                    ":focus": {
-                      "background-color": "#ce0812"
-                    }
-                  }
-                },
-                "text": {
-                  "total": "Subtotal",
-                  "button": "Checkout"
-                }
+              text: {
+                total: 'Subtotal',
+                button: 'Checkout',
               },
-              "toggle": {
-                "styles": {
-                  "toggle": {
-                    "background-color": "#e50914",
-                    ":hover": {
-                      "background-color": "#ce0812"
-                    },
-                    ":focus": {
-                      "background-color": "#ce0812"
-                    }
-                  },
-                  "count": {
-                    "color": "#f9f9f9",
-                    ":hover": {
-                      "color": "#f9f9f9"
-                    }
-                  },
-                  "iconPath": {
-                    "fill": "#f9f9f9"
+            },
+            option: {
+              styles: {
+                select: {
+                  'background-color': '#000',
+                  color: '#fff',
+                  'font-size': '18px',
+                  border: '1px solid #fcb4b4',
                 },
-            }
-        }
-    }
-            });
-          });
-        };
-        loadShopifySDK().then(() => {
-            initializeBuyButton();
-          });
-      
-          // Cleanup function to prevent multiple instances
-          return () => {
-            if (productRef.current) {
-              productRef.current.innerHTML = '';
-            }
-          };
-        }, []); // Empty dependency array to ensure the effect runs only once
-      
-        return <div id="product-component-1681879189619" ref={productRef}></div>;
-      };
-      
-      export default ShopifyBuyButton;
+              },
+            },
+          },
+        });
+      });
+    };
+
+    loadShopifySDK().then(() => {
+      initializeBuyButton();
+    });
+
+   
+
+
+    // Cleanup function to prevent multiple instances
+    return () => {
+      if (productRef.current) {
+        productRef.current.innerHTML = '';
+      }
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once
+
+  return <div id="product-component-1681879189619" ref={productRef} className="shopify-product"></div>;
+};
+
+export default ShopifyBuyButton;
+
 
