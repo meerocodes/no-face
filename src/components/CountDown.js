@@ -11,27 +11,27 @@ const CountdownTimer = () => {
         return { days: remainingDays, hours: remainingHours, minutes: remainingMinutes, seconds: remainingSeconds };
       };
       
-
-  const fetchEndTime = async () => {
-    const response = await fetch('http://localhost:3001/countdown-end-time');
+    const fetchDuration = async () => {
+    const response = await fetch('http://localhost:3001/countdown-duration');
     const data = await response.json();
-    return new Date(data.endTime);
-  };
+    return data.duration;
+    };
+    
 
   const [remainingTime, setRemainingTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
+    let interval;
     const updateRemainingTime = async () => {
-      const endTime = await fetchEndTime();
-      setRemainingTime(getRemainingTime(endTime));
+      const duration = await fetchDuration();
+      const endTime = new Date().getTime() + duration;
+
+      interval = setInterval(() => {
+        setRemainingTime(getRemainingTime(new Date(endTime)));
+      }, 1000);
     };
 
     updateRemainingTime();
-
-    const interval = setInterval(async () => {
-      const endTime = await fetchEndTime();
-      setRemainingTime(getRemainingTime(endTime));
-    }, 1000);
 
     return () => {
       clearInterval(interval);
