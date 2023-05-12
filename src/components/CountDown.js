@@ -24,18 +24,20 @@ const CountdownTimer = () => {
     const updateRemainingTime = async () => {
       const endTime = await fetchEndTime();
       setRemainingTime(getRemainingTime(endTime));
-
-      const interval = setInterval(() => {
-        setRemainingTime(getRemainingTime(endTime));
-      }, 1000);
-
-      return () => {
-        clearInterval(interval);
-      };
     };
 
     updateRemainingTime();
+
+    const interval = setInterval(async () => {
+      const endTime = await fetchEndTime();
+      setRemainingTime(getRemainingTime(endTime));
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
 
   const { days: d, hours: h, minutes: m, seconds: s } = remainingTime;
   return (
