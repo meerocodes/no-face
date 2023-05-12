@@ -18,7 +18,7 @@ const CountdownTimer = () => {
     return new Date(data.endTime);
   };
 
-  const [remainingTime, setRemainingTime] = useState({ hours: 100, minutes: 40, seconds: 0 });
+  const [remainingTime, setRemainingTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
     const updateRemainingTime = async () => {
