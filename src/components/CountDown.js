@@ -16,7 +16,7 @@ const getRemainingTime = (endTime) => {
       
 
   const fetchEndTime = async () => {
-    const response = await fetch('http://localhost:3000/countdown-end-time');
+    const response = await fetch('http://localhost:3001/countdown-end-time');
     const data = await response.json();
     return data.endTime; // use the timestamp directly
   };
