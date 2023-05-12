@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
-const ShopifyBuyButton = () => {
+const ShopifyBuyButton = ({ productId }) => {
   const productRef = useRef();
 
   useEffect(() => {
+    let isMounted = true;
+
     const loadShopifySDK = () => {
       return new Promise((resolve) => {
         if (window.ShopifyBuy && window.ShopifyBuy.UI) {
@@ -21,14 +23,18 @@ const ShopifyBuyButton = () => {
     };
 
     const initializeBuyButton = () => {
+      if (!isMounted) return;
+
       const client = window.ShopifyBuy.buildClient({
         domain: 'nofaceclub.myshopify.com',
         storefrontAccessToken: 'bebbe31a4432498067834a098145e689',
       });
 
       window.ShopifyBuy.UI.onReady(client).then((ui) => {
+        if (!isMounted) return;
+
         ui.createComponent('product', {
-          id: '6959503802465',
+          id: 6959503802465,
           node: productRef.current,
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
@@ -114,17 +120,18 @@ const ShopifyBuyButton = () => {
    
 
 
-    // Cleanup function to prevent multiple instances
+    // Cleanup function to prevent multiple instances and clear when unmounting
     return () => {
-      if (productRef.current) {
-        productRef.current.innerHTML = '';
-      }
-    };
-  }, []); // Empty dependency array to ensure the effect runs only once
-
-  return <div id="product-component-1681879189619" ref={productRef} className="shopify-product"></div>;
-};
-
-export default ShopifyBuyButton;
+        isMounted = false;
+        if (productRef.current) {
+          productRef.current.innerHTML = '';
+        }
+      };
+    }, [productId]);
+  
+    return <div ref={productRef} />;
+  };
+  
+  export default ShopifyBuyButton;
 
 
