@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import useCountDown from 'react-countdown-hook';
+import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
   const fetchEndTime = async () => {
@@ -8,27 +7,44 @@ const CountdownTimer = () => {
     return data.endTime; // use the timestamp directly
   };
 
-  const initialTime = 0; // initial time in milliseconds
-  const interval = 1000; // interval to change remaining time amount, defaults to 1000
+  const getRemainingTime = (endTime) => {
+    const currentTime = new Date().getTime(); // gets current time in milliseconds
+    const difference = endTime - currentTime;
+    
+    const remainingDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const remainingHours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const remainingMinutes = Math.floor((difference / (1000 * 60)) % 60);
+    const remainingSeconds = Math.floor((difference / 1000) % 60);
+    
+    return { days: remainingDays, hours: remainingHours, minutes: remainingMinutes, seconds: remainingSeconds };
+  };
 
-  const [timeLeft, { start }] = useCountDown(initialTime, interval);
+  const [remainingTime, setRemainingTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const setEndTime = async () => {
+    let interval;
+    const updateRemainingTime = async () => {
       const endTime = await fetchEndTime();
-      const currentTime = new Date().getTime();
-      const remainingTime = endTime - currentTime;
-      start(remainingTime);
+
+      interval = setInterval(() => {
+        const newRemainingTime = getRemainingTime(endTime);
+
+        if (newRemainingTime.days <= 0 && newRemainingTime.hours <= 0 && newRemainingTime.minutes <= 0 && newRemainingTime.seconds <= 0) {
+          clearInterval(interval);
+        } else {
+          setRemainingTime(newRemainingTime);
+        }
+      }, 1000);
     };
 
-    setEndTime();
+    updateRemainingTime();
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
-  const d = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const h = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((timeLeft / (1000 * 60)) % 60);
-  const s = Math.floor((timeLeft / 1000) % 60);
-
+  const { days: d, hours: h, minutes: m, seconds: s } = remainingTime;
   return (
     <div className='countDown'>
       {d} {d === 1 ? 'day' : 'days'} {h} {h === 1 ? 'hour' : 'hours'} {m} {m === 1 ? 'minute' : 'minutes'} {s} {s === 1 ? 'second' : 'seconds'}
@@ -37,6 +53,7 @@ const CountdownTimer = () => {
 };
 
 export default CountdownTimer;
+
 
 
 
