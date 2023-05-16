@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import useCountdown from "react-countdown-hook";
 
 const Countdown = () => {
@@ -7,18 +8,25 @@ const Countdown = () => {
 
   useEffect(() => {
     if (!hasFetchedTime) {
-      fetch("http://localhost:3001/endtime")
-        .then((res) => res.json())
-        .then((data) => {
-          const nowUnix = Math.floor(Date.now() / 1000); // get current time as UNIX timestamp
-          const endTimeUnix = data.endTime;
-          const timeToCountDown = (endTimeUnix - nowUnix) * 1000; // convert back to milliseconds
+      axios
+        .get("http://localhost:3001/endtime")
+        .then((response) => {
+          const now = new Date();
+          const endTime = new Date(response.data.endTime);
+          const timeToCountDown = endTime - now;
+
+          console.log('Now:', now);
+          console.log('End time:', endTime);
+          console.log('Time to count down:', timeToCountDown);
 
           if (timeToCountDown > 0) {
             start(timeToCountDown);
           }
 
           setHasFetchedTime(true);
+        })
+        .catch((error) => {
+          console.error('Error fetching end time:', error);
         });
     }
   }, [hasFetchedTime, start]);
@@ -32,6 +40,14 @@ const Countdown = () => {
 };
 
 export default Countdown;
+
+
+
+
+
+
+
+
 
 
 
