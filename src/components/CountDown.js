@@ -1,14 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Countdown from 'react-countdown';
 
-// Calculate the date 10 days from now
-const dateInTenDays = Date.now() + 10 * 24 * 60 * 60 * 1000;
+// Renderer callback with condition
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a completed state
+    return <span>You are good to go!</span>;
+  } else {
+    // Render a countdown
+    return <span className='countDown'>{days} days, {hours} hours, {minutes} minutes, {seconds} seconds remaining</span>;
+  }
+};
 
-ReactDOM.render(
-  <Countdown date={dateInTenDays} />,
-  document.getElementById('root')
-);
+export default function CountdownTimer() {
+  // Calculate the time 10 days from now
+  const tenDaysFromNow = Date.now() + 10 * 24 * 60 * 60 * 1000;
+
+  return (
+    <Countdown
+      date={tenDaysFromNow}
+      renderer={renderer}
+    />
+  );
+}
+
+
 
 
 
