@@ -9,7 +9,7 @@ const Countdown = () => {
   useEffect(() => {
     if (!hasFetchedTime) {
       axios
-        .get("http://localhost:3001/endtime")
+        .get("/endtime")
         .then((response) => {
           const now = new Date();
           const endTime = new Date(response.data.endTime);

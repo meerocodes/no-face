@@ -1,6 +1,7 @@
 {
   "name": "no-face",
   "version": "0.1.0",
+  "proxy": "http://localhost:3001",
   "private": true,
   "dependencies": {
     "@shopify/buy-button-js": "^2.2.1",
