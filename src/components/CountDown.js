@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import useCountdown from "react-countdown-hook";
 
 const Countdown = () => {
-  const [timeLeft, { start }] = useCountdown(0, 1000); // Initialize with 0
+  const [timeLeft, { start, reset }] = useCountdown(0, 1000); // Initialize with 0
   const [hasFetchedTime, setHasFetchedTime] = useState(false);
 
   useEffect(() => {
@@ -17,13 +17,14 @@ const Countdown = () => {
           const timeToCountDown = endTime - now;
 
           if (timeToCountDown > 0) {
+            reset();
             start(timeToCountDown);
           }
 
           setHasFetchedTime(true);
         });
     }
-  }, [hasFetchedTime, start]);
+  }, [hasFetchedTime, start, reset]);
 
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -34,6 +35,7 @@ const Countdown = () => {
 };
 
 export default Countdown;
+
 
 
 
