@@ -1,45 +1,43 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import useCountdown from "react-countdown-hook";
+import {useState, useEffect} from 'react';
+import {getRemainingTimeUntilMsTimestamp} from './CountDownUtils';
 
-const Countdown = () => {
-  const [timeLeft, { start }] = useCountdown(0, 1000);
-  const [hasFetchedTime, setHasFetchedTime] = useState(false);
+const defaultRemainingTime = {
+    seconds: '00',
+    minutes: '00',
+    hours: '00',
+    days: '00'
+}
 
-  useEffect(() => {
-    if (!hasFetchedTime) {
-      axios
-        .get("/endtime")
-        .then((response) => {
-          const now = new Date();
-          const endTime = new Date(response.data.endTime);
-          const timeToCountDown = endTime - now;
+const Countdown = ({countdownTimestampMs}) => {
+    const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
-          console.log('Now:', now);
-          console.log('End time:', endTime);
-          console.log('Time to count down:', timeToCountDown);
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            updateRemainingTime(countdownTimestampMs);
+        }, 1000);
+        return () => clearInterval(intervalId);
+    },[countdownTimestampMs]);
 
-          if (timeToCountDown > 0) {
-            start(timeToCountDown);
-          }
-
-          setHasFetchedTime(true);
-        })
-        .catch((error) => {
-          console.error('Error fetching end time:', error);
-        });
+    function updateRemainingTime(countdown) {
+        setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
     }
-  }, [hasFetchedTime, start]);
 
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-  return <div className="countDown">{`${days}d ${hours}h ${minutes}m ${seconds}s`}</div>;
-};
+    return(
+        <div className="countdown-timer">
+            <span className="two-numbers">{remainingTime.days}</span>
+            <span className='date-count'>d</span>
+            <span className="two-numbers">{remainingTime.hours}</span>
+            <span className='date-count'>h</span>
+            <span className="two-numbers">{remainingTime.minutes}</span>
+            <span className='date-count'>m</span>
+            <span className="two-numbers">{remainingTime.seconds}</span>
+            <span className='date-count'>s</span>
+        </div>
+    );
+}
 
 export default Countdown;
+
 
 
 

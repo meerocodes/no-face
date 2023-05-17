@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/*' element={<Error/>}/>
-
+      
 
         <Route path='/preOrder' element={<PreOrderPage/>}/>
         <Route path='/home' element={<Home/>}/>
