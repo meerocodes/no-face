@@ -16,7 +16,8 @@ const PreOrderPage = () => {
                     </div>
                     <Countdown 
                     countdownTimestampMs={1686121561404}/>
-
+                    <h3>Remaining Quanitity: 32❗️</h3>
+                    <br></br>
                     <div className="buyButton">
                     <ShopifyBuyButton productId="6959503802465" />
                     </div>
