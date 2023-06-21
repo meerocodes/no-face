@@ -49,6 +49,7 @@ const ShopifyBuyButton = ({ productId }) => {
                 },
                 title: {
                   color: '#ffffff',
+                  display:'none',
                   'font-family':'AnotherTag',
                 },
                 button: {

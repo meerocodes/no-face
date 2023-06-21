@@ -14,12 +14,16 @@ const PreOrderPage = () => {
                     <div className="imgContainer">
                         <img src={tShirt} alt =' no face club t shirt 3d render'></img>
                     </div>
-                    <Countdown 
-                    countdownTimestampMs={1686121561404}/>
-                    <h3>Remaining Quanitity: 32❗️</h3>
+                    <aside>
+                        <Countdown 
+                        countdownTimestampMs={1686121561404}/>
+                    </aside>
                     <br></br>
                     <div className="buyButton">
-                    <ShopifyBuyButton productId="6959503802465" />
+                        <h2>" Pre-Face "</h2>
+                        <ShopifyBuyButton productId="6959503802465" />
+                        <h4>units left: 55/100</h4>
+
                     </div>
                   
                 </div>

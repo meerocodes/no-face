@@ -48,22 +48,48 @@ nav a {
 }
 nav {
   min-height: 20vh;
+  display: flex;
 }
 nav h1 {
   width: 25%;
-  font-size: clamp(1rem, 5vw, 3rem)
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 nav .wrapper {
   justify-content: space-between;
   display: flex;
+  gap: 10px;
   align-items: center;
 }
+  
+nav h3 {
+  font-family: 'AnotherTag';
+  font-weight: 500;
+
+}
+
 nav img{
   width: 100%;
+
 }
-.socials {
-  color: white;
-  width: 25%;
+
+.rightSide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+}
+.menu .rightSide .about{
+  width: 20%;
+
+}
+.rightSide a {
+  width: 80%;
+  text-decoration: none;
+  
+}
+.nfc2019{
+  height: clamp(1rem, 4vw,3rem)
 }
 
 
@@ -176,6 +202,9 @@ button:hover{
   min-height: 80vh;
 
 }
+.preOrder .wrapper {
+  display: flex;
+}
 .preOrder h3 {
   font-family: "Space";
   color: #b6b6b6;
@@ -199,6 +228,7 @@ button:hover{
 .buyButton{
   min-height: 20%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
@@ -213,7 +243,17 @@ button:hover{
   font-size: 18px;
   border: 1px solid #fcb4b4;
 }
+.preOrder h4 {
+  color: white;
+  position: relative;
+}
 
+/* .preOrder aside{
+  position: absolute;
+  width: 20%;
+  top: 500px;
+  right: 250px;
+} */
 
 
 /* FORM STYLES */
@@ -291,8 +331,8 @@ button:hover{
 /* COUNTDOWN */
 
 .two-numbers{
-  color: white;
-  font-family: 'Space';
+  color: #E50914;
+  font-family: 'Arial';
   font-weight: 900;
   margin-left: 5px;
   margin-bottom: 30px;
@@ -343,5 +383,6 @@ button:hover{
   }
   .preOrder .wrapper img{
     width:100%;
+    flex-direction: row;
   }
 }
