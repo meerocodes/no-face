@@ -36,6 +36,7 @@ html{
   width: 85%;
   
 }
+
 .App {
   text-align: center;
   background-image: url(./assets/bgImg.png);
@@ -43,8 +44,12 @@ html{
   background-position:center; 
 }
 /* Nav */
+nav .about{
+  font-size: clamp(1.2rem, 5vw, 3rem);
+  justify-content: center;
+}
 nav a {
-  width:25%;
+  text-decoration: none;
 }
 nav {
   min-height: 20vh;
@@ -52,15 +57,21 @@ nav {
 }
 nav h1 {
   width: 25%;
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: clamp(1.2rem, 5vw, 3rem);
 }
 nav .wrapper {
+  width: 90%;
   justify-content: space-between;
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap:25px;
 }
-  
+nav a {
+  width: 25%;
+}
+nav a img  {
+  width: 100%;
+}
 nav h3 {
   font-family: 'AnotherTag';
   font-weight: 500;
@@ -71,7 +82,7 @@ nav img{
   width: 100%;
 
 }
-
+nav 
 .rightSide{
   display: flex;
   justify-content: center;
@@ -169,7 +180,7 @@ main img {
   position: relative;
 }
 main .imgContainer{
-  width: 50%;
+  width: 40%;
 }
 main img:hover {
   content: url('./assets/noFace3dRender.gif');
@@ -202,18 +213,17 @@ button:hover{
   min-height: 80vh;
 
 }
-.preOrder .wrapper {
-  display: flex;
-}
+
 .preOrder h3 {
   font-family: "Space";
   color: #b6b6b6;
 }
 .preOrder .wrapper {
+  padding-top: 50px;
+  width: 95%;
   min-height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-self: center;
 }
 .preOrder .wrapper button {
@@ -226,6 +236,7 @@ button:hover{
 }
 
 .buyButton{
+  width: 35%;
   min-height: 20%;
   display: flex;
   flex-direction: column;
@@ -354,6 +365,9 @@ button:hover{
   nav {
     height: 100px;
   }
+  nav .wrapper {
+    width: 95%;
+  }
   main .wrapper{
     flex-direction: column;
   }
@@ -378,11 +392,16 @@ button:hover{
   .shirtDetails {
     width: 75%;
   }
-  .imgContainer{
-    min-height: 50vh;
-  }
+
   .preOrder .wrapper img{
     width:100%;
     flex-direction: row;
+  }
+  .preOrder .wrapper {
+    width: 95%;
+    flex-direction: column;
+  }
+  .preOrder .buyButton{
+    width: 100%;
   }
 }
