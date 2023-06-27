@@ -48,9 +48,10 @@ html{
   background-position:center; 
 }
 /* Nav */
-nav .about{
+nav .wrapper .about{
   font-size: clamp(1.2rem, 5vw, 3rem);
   justify-content: center;
+  font-family: 'AnotherTag'
 }
 nav a {
   text-decoration: none;
@@ -384,13 +385,58 @@ button:hover{
 }
 
 
+/* ABOUT PAGE */
 
+.aboutPage{
+  background-color: black;
+  height: 100vh;
+  padding-top: 10%;
+}
+.aboutPage h1{
+  font-size: clamp(2rem, 3vw, 6rem); ;
+}
+.topAbout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutPage h2{
+  font-size: clamp(.8rem, 4vw, 1rem);
+  font-family: 'CodePro';
+  font-weight: 200;
+  width: 50%;
+  text-align: center;
 
+}
+.aboutPage .wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutPage span {
+  font-family: "AnotherTag";
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+.aboutPage img{
+  width: 200px;
+}
+
+.wrapper h3 {
+  font-size: clamp(.8rem, 4vw, 1rem);
+  font-family: "CodePro";
+  font-weight: 300;
+}
 
 /* MEDIA QUERIES */
 @media (max-width:900px){
+
+  /* NAV MEDIA */
   nav {
-    height: 100px;
+    min-height: 10vh;
   }
   nav .wrapper {
     width: 95%;
@@ -435,4 +481,11 @@ button:hover{
   .preOrder .description {
     text-align: center;
   }
+
+
+/* ABOUT MEDIA */
+  .aboutPage h2{
+    width: 90%;
+  }
+
 }
