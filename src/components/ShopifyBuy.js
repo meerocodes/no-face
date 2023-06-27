@@ -53,6 +53,8 @@ const ShopifyBuyButton = ({ productId }) => {
                   'font-family':'AnotherTag',
                 },
                 button: {
+                  display: 'flex',
+                  "text-align":'left',
                   padding: '8px 30px',
                   color: '#E50914',
                   'background-color': 'transparent',
@@ -68,6 +70,7 @@ const ShopifyBuyButton = ({ productId }) => {
                   },
                 },
                 price: {
+                  display:'none',
                   color: '#f5f5f5',
                 },
                 compareAt: {
@@ -103,6 +106,7 @@ const ShopifyBuyButton = ({ productId }) => {
             option: {
               styles: {
                 select: {
+                  'margin-inline-start':'0',
                   'background-color': '#000',
                   color: '#fff',
                   'font-size': '18px',

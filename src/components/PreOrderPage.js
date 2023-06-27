@@ -16,9 +16,11 @@ const PreOrderPage = () => {
                     <br></br>
                     <div className="buyButton">
                         <h2>" Pre-Face "</h2>
-                        <ShopifyBuyButton productId="6959503802465" />
-                        <h4>units left: 55/100</h4>
+                        <h3 className='description'>Drop shoulder. 100% cotton tee. Made in Los Angeles, designed in Toronto. Statement piece.</h3>
+                        <h3 className='price'>60.00</h3>
+                        <h4>UNITS LEFT: 55/100</h4>
 
+                        <ShopifyBuyButton productId="6959503802465" />
                     </div>
                   
                 </div>

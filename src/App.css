@@ -17,6 +17,10 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   font-family: 'Space';
   src: url(../fonts/SpaceGrotesk-2.0.0/ttf/SpaceGrotesk[wght].ttf);
 }
+@font-face {
+  font-family: 'CodePro';
+  src: url(../fonts/code-pro-free-font-family/Code\ Pro\ Bold\ LC.otf) format('opentype');;
+}
 h1 {
   font-family: 'AnotherTag', sans-serif;
   font-weight: 500;
@@ -241,13 +245,26 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 20px;
 }
 .buyButton html .shopify-buy__layout-vertical .shopify-buy__btn-wrapper{
   margin-top: 15px;
 
 }
+.preOrder .description{
+  font-family: 'CodePro';
+  font-size: .8rem;
+  text-align: left;
+  font-weight: 300;
+  color: white;
+}
+.preOrder .price{
+  font-size: .8rem;
+  margin-top: 15px;
+  color:white;
+}
+
 .shopify-product select {
   background-color: transparent;
   color: #fff;
@@ -255,8 +272,13 @@ button:hover{
   border: 1px solid #fcb4b4;
 }
 .preOrder h4 {
+  font-size: .8rem;
   color: white;
   position: relative;
+  font-family: 'CodePro';
+  font-weight: 200;
+  margin-bottom: 0;
+  margin-top: 50px;
 }
 
 /* .preOrder aside{
@@ -340,13 +362,18 @@ button:hover{
 }
 
 /* COUNTDOWN */
+.countdown-timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 .two-numbers{
   color: #E50914;
   font-family: 'Arial';
   font-weight: 900;
   margin-left: 5px;
-  margin-bottom: 30px;
 }
 .date-count{
   color: #E50914;
@@ -403,5 +430,9 @@ button:hover{
   }
   .preOrder .buyButton{
     width: 100%;
+    align-items: center;
+  }
+  .preOrder .description {
+    text-align: center;
   }
 }

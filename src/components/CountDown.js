@@ -24,7 +24,7 @@ const Countdown = ({countdownTimestampMs}) => {
 
     return(
         <div className="countdown-timer">
-            <p>Release date</p>
+            <p>RELEASING IN</p>
             <span className="two-numbers">{remainingTime.days}</span>
             <span className='date-count'>d :</span>
             <span className="two-numbers">{remainingTime.hours}</span>
