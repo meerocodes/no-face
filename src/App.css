@@ -72,10 +72,10 @@ nav .wrapper {
   gap:25px;
 }
 nav a {
-  width: 25%;
+  width: 30%;
 }
 nav a img  {
-  width: 100%;
+  width: 108%;
 }
 nav h3 {
   font-family: 'AnotherTag';
@@ -83,10 +83,7 @@ nav h3 {
 
 }
 
-nav img{
-  width: 100%;
 
-}
 nav 
 .rightSide{
   display: flex;
@@ -215,7 +212,7 @@ button:hover{
 
 /* PREORDER PAGE STYLES */
 .preOrder{
-  min-height: 80vh;
+  min-height: 90vh;
 
 }
 
@@ -369,15 +366,21 @@ button:hover{
   align-items: center;
 
 }
-
-.two-numbers{
+.countdown-timer p{
+  font-family: 'CodePro';
   color: #E50914;
-  font-family: 'Arial';
+
+
+}
+.two-numbers{
+  color: white;
+  font-family: 'CodePro';
   font-weight: 900;
   margin-left: 5px;
 }
 .date-count{
-  color: #E50914;
+  font-family: 'CodePro';
+  color: white;
   font-weight: 800;
   text-shadow: 0 .2px 0px #fff;
   margin-left: 2px;
@@ -418,7 +421,7 @@ button:hover{
 }
 .aboutPage span {
   font-family: "AnotherTag";
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.3rem, 4vw, 2.8rem);
   font-weight: 400;
 }
 .aboutPage img{

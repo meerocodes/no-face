@@ -55,11 +55,11 @@ const ShopifyBuyButton = ({ productId }) => {
                 button: {
                   display: 'flex',
                   "text-align":'left',
-                  padding: '8px 30px',
+                  padding: '8px 98px',
                   color: '#E50914',
                   'background-color': 'transparent',
                   'font-weight': '700',
-                  border: '1px solid #fcb4b4',
+                  border: '1.1px solid #fcb4b4',
                   ':hover': {
                     color: '#f9f9f9',
                     'background-color': '#E50914',
@@ -110,7 +110,7 @@ const ShopifyBuyButton = ({ productId }) => {
                   'background-color': '#000',
                   color: '#fff',
                   'font-size': '18px',
-                  border: '1px solid #fcb4b4',
+                  border: '.1px solid #fcb4b4',
                 },
               },
             },
