@@ -75,7 +75,7 @@ nav a {
   width: 30%;
 }
 nav a img  {
-  width: 108%;
+  width: 85%;
 }
 nav h3 {
   font-family: 'AnotherTag';
@@ -251,6 +251,7 @@ button:hover{
 
 }
 .preOrder .description{
+  width: 377px;
   font-family: 'CodePro';
   font-size: .8rem;
   text-align: left;
@@ -390,10 +391,12 @@ button:hover{
 
 /* ABOUT PAGE */
 
+.aboutLogo {
+  width: 300px;
+}
 .aboutPage{
   background-color: black;
   height: 100vh;
-  padding-top: 10%;
 }
 .aboutPage h1{
   font-size: clamp(2rem, 3vw, 6rem); ;
@@ -421,12 +424,10 @@ button:hover{
 }
 .aboutPage span {
   font-family: "AnotherTag";
-  font-size: clamp(1.3rem, 4vw, 2.8rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   font-weight: 400;
 }
-.aboutPage img{
-  width: 200px;
-}
+
 
 .wrapper h3 {
   font-size: clamp(.8rem, 4vw, 1rem);
@@ -438,6 +439,9 @@ button:hover{
 @media (max-width:900px){
 
   /* NAV MEDIA */
+  nav a img  {
+    width: 107%;
+  }
   nav {
     min-height: 10vh;
   }
@@ -483,6 +487,10 @@ button:hover{
   }
   .preOrder .description {
     text-align: center;
+  }
+  .preOrder .description{
+    width: 90%;
+
   }
 
 
