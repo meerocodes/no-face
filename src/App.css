@@ -267,7 +267,7 @@ button:hover{
 .shopify-product select {
   background-color: transparent;
   color: #fff;
-  font-size: 18px;
+  font-size: 30px;
   border: 1px solid #fcb4b4;
 }
 .preOrder h4 {
@@ -435,7 +435,9 @@ button:hover{
   font-weight: 300;
 }
 
-/* MEDIA QUERIES */
+
+
+/* MEDIA QUERIES **********/
 @media (max-width:900px){
 
   /* NAV MEDIA */

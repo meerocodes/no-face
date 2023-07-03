@@ -53,12 +53,12 @@ const ShopifyBuyButton = ({ productId }) => {
                   'font-family':'AnotherTag',
                 },
                 button: {
-                  display: 'flex',
-                  "text-align":'left',
-                  padding: '8px 98px',
+                  'font-size': '1.1rem',
+                  "text-align":'center',
+                  width:'300px',
                   color: '#E50914',
                   'background-color': 'transparent',
-                  'font-weight': '700',
+                  'font-weight': '900',
                   border: '1.1px solid #fcb4b4',
                   ':hover': {
                     color: '#f9f9f9',
@@ -81,7 +81,8 @@ const ShopifyBuyButton = ({ productId }) => {
                 },
               },
               text: {
-                button: 'Pre - Order',
+                button: 'PRE  ORDER',
+
               },
             },
             cart: {
