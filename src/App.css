@@ -21,9 +21,16 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   font-family: 'CodePro';
   src: url(../fonts/code-pro-free-font-family/Code\ Pro\ Bold\ LC.otf) format('opentype');;
 }
+@font-face {
+  font-family: 'CodeProRegular';
+  src: url(../fonts/code-pro-free-font-family/Code\ Pro.otf) format('opentype');;
+}
+
 h1 {
   font-family: 'AnotherTag', sans-serif;
-  font-weight: 500;
+  font-weight: 100;
+  flex-grow: .75;
+  width: 350px;
   font-size: clamp(2rem,5vw, 4rem);
   color: white;
   margin: 0;
@@ -51,7 +58,12 @@ html{
 nav .wrapper .about{
   font-size: clamp(1.2rem, 5vw, 3rem);
   justify-content: center;
-  font-family: 'AnotherTag'
+  flex-grow: 1;
+  font-family: 'AnotherTag';
+  width: 25%;
+}
+nav .wrapper .about a:visited{
+color: white;
 }
 nav a {
   text-decoration: none;
@@ -61,12 +73,12 @@ nav {
   display: flex;
 }
 nav h1 {
+  flex-grow: 1;
   width: 25%;
   font-size: clamp(1.2rem, 5vw, 3rem);
 }
 nav .wrapper {
   width: 90%;
-  justify-content: space-between;
   display: flex;
   align-items: center;
   gap:25px;
@@ -76,6 +88,7 @@ nav a {
 }
 nav a img  {
   width: 85%;
+  flex-grow: 1.5;
 }
 nav h3 {
   font-family: 'AnotherTag';
@@ -93,8 +106,7 @@ nav
 
 }
 .menu .rightSide .about{
-  width: 20%;
-
+flex-grow: 1;
 }
 .rightSide a {
   width: 80%;
@@ -252,13 +264,14 @@ button:hover{
 }
 .preOrder .description{
   width: 377px;
-  font-family: 'CodePro';
-  font-size: .8rem;
+  font-family: 'CodeProRegular';
+  font-size: .75rem;
   text-align: left;
-  font-weight: 300;
+  font-weight: 500;
   color: white;
 }
 .preOrder .price{
+  font-family: 'CodeProRegular';
   font-size: .8rem;
   margin-top: 15px;
   color:white;
@@ -277,7 +290,7 @@ button:hover{
   font-family: 'CodePro';
   font-weight: 200;
   margin-bottom: 0;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 /* .preOrder aside{
@@ -295,7 +308,8 @@ button:hover{
 }
 .preOrder h2{
   font-family: 'AnotherTag';
-  font-size: clamp(2rem,5vw, 6rem);
+  margin-bottom:5px;
+  font-size: clamp(2.7rem,5vw, 6rem);
   font-weight: 500;
 }
 .wrapper form h3{
@@ -368,19 +382,19 @@ button:hover{
 
 }
 .countdown-timer p{
-  font-family: 'CodePro';
+  font-family: 'CodeProRegular';
   color: #E50914;
 
 
 }
 .two-numbers{
   color: white;
-  font-family: 'CodePro';
+  font-family: 'CodeProRegular';
   font-weight: 900;
   margin-left: 5px;
 }
 .date-count{
-  font-family: 'CodePro';
+  font-family: 'CodeProRegular';
   color: white;
   font-weight: 800;
   text-shadow: 0 .2px 0px #fff;
@@ -413,6 +427,7 @@ button:hover{
   font-weight: 200;
   width: 50%;
   text-align: center;
+  line-height: 1.2rem;
 
 }
 .aboutPage .wrapper {
@@ -424,8 +439,12 @@ button:hover{
 }
 .aboutPage span {
   font-family: "AnotherTag";
-  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-size: clamp(1.1rem, 4vw, 1.7rem);
   font-weight: 400;
+}
+#founded {
+  font-size:clamp(2.5rem, 4vw, 3rem);
+  ;
 }
 
 

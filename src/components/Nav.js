@@ -13,7 +13,7 @@ const Nav = () => {
                 <div className="wrapper">
                     <h1>NOFACECLUB</h1>
                     <Link to='/'><img src={logo} alt="Logo" /></Link>
-                    <Link to ='/About'> <h3 className="about">ABOUT</h3></Link>
+                     <h3 className="about"><Link to ='/About'>ABOUT  </Link></h3>
                 </div>
             </nav>
         </header>
