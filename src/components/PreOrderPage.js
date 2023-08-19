@@ -3,6 +3,9 @@ import Countdown from './CountDown';
 import Nav from './Nav';
 import ShopifyBuyButton from './ShopifyBuy';
 
+import Footer from './Footer';
+import CarouselModal from './CarouselModal';
+
 const PreOrderPage = () => {
     return(
         <>
@@ -15,6 +18,8 @@ const PreOrderPage = () => {
                 
                     <br></br>
                     <div className="buyButton">
+                        <CarouselModal />
+
                         <h2>" PRE-FACE "</h2>
                         <h3 className='description'>Drop shoulder. 100% cotton tee. Made in Los Angeles, designed in Toronto. Statement piece.</h3>
                         <h3 className='price'>60.00</h3>
@@ -26,9 +31,10 @@ const PreOrderPage = () => {
                 </div>
                 <aside>
                         <Countdown 
-                        countdownTimestampMs={1690000909911}/>
-                    </aside>
+                        countdownTimestampMs={1695000090000}/>
+                </aside>
             </section>
+            <Footer />
         </>
 
     )

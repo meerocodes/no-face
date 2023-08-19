@@ -85,6 +85,7 @@ nav .wrapper {
 }
 nav a {
   width: 30%;
+  color: white;
 }
 nav a img  {
   width: 85%;
@@ -111,6 +112,7 @@ flex-grow: 1;
 .rightSide a {
   width: 80%;
   text-decoration: none;
+
   
 }
 .nfc2019{
@@ -319,7 +321,7 @@ button:hover{
 .shopify-buy__product__title{
   color: white;
 }
-/* 404 ERROR PAGE */
+/********************* 404 ERROR PAGE */
 .error {
   height: 100vh;
 }
@@ -374,7 +376,7 @@ button:hover{
   background-color: #3e8e41;
 }
 
-/* COUNTDOWN */
+/***************** COUNTDOWN ***********/
 .countdown-timer{
   display: flex;
   justify-content: center;
@@ -403,7 +405,7 @@ button:hover{
 }
 
 
-/* ABOUT PAGE */
+/************** ABOUT PAGE */
 
 .aboutLogo {
   width: 300px;
@@ -454,14 +456,157 @@ button:hover{
   font-weight: 300;
 }
 
+/* ***************FOOTETR STYLES--------------------- */
+
+/* Footer styles */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Social icon styles */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.social-icons a {
+  color: white;
+
+}
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icon img {
+  filter: invert(100%) saturate(0%) brightness(100%);
+    width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: scale(1.2);
+}
 
 
-/* MEDIA QUERIES **********/
+/* *****************CAROUSEL MODAL STYLES ************/
+/* CarouselModal.css */
+
+/* Modal Styles */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* This ensures the modal is above other page elements */
+}
+
+.modal-content {
+  background-color: transparent;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  height: 80%;
+}
+.preOrder .modal-content .modalArrow{
+  width: 10%;
+  color: black;
+}
+.preOrder .wrapper .modal-close-button {
+  position: absolute;
+  right: 20px;
+  color: white;
+  width: 10%;
+  top: 10px;
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: ease-in-out .2s;
+}
+.preOrder .wrapper .modal-close-button:hover {
+  box-shadow: none;
+  font-size: 1.4rem;
+  box-shadow: 0 0 5px #E50914;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-container img {
+  width: 100%; /* Maximize image width */
+  max-height: 90%; /* Allow a little space for the close button and padding */
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-container button {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white for better visibility */
+  border: 2px solid #000000;
+  padding: 5px 10px; /* Reduced padding */
+  font-size: 16px;   /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-container button:hover {
+  background-color: #f0f0f0;
+}
+
+.carousel-container button:nth-child(1) {
+  left: 10px;
+}
+
+.carousel-container button:nth-child(3) {
+  right: 10px;
+}
+
+/* Open Button Style */
+.preOrder .wrapper .openCarousel {
+  padding: 5px 5px;
+  width: 100%;
+  font-size: .9rem;
+  background-color: #E50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.preOrder .wrapper .openCarousel:hover {
+  background-color: white;
+  color: red;
+}
+
+
+
+/************** MEDIA QUERIES **********/
 @media (max-width:900px){
 
   /* NAV MEDIA */
   nav a img  {
-    width: 107%;
+    width: 108.5%;
   }
   nav {
     min-height: 10vh;
@@ -495,7 +640,7 @@ button:hover{
   }
 
   .preOrder .wrapper img{
-    width:100%;
+    width: 100%;
     flex-direction: row;
   }
   .preOrder .wrapper {
@@ -508,11 +653,9 @@ button:hover{
   }
   .preOrder .description {
     text-align: center;
+    width: 85%
   }
-  .preOrder .description{
-    width: 90%;
 
-  }
 
 
 /* ABOUT MEDIA */
