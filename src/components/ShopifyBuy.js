@@ -47,6 +47,9 @@ const ShopifyBuyButton = ({ productId }) => {
                     'margin-bottom': '50px',
                   },
                 },
+                img: {
+                  display:'none'
+                },
                 title: {
                   color: '#ffffff',
                   display:'none',

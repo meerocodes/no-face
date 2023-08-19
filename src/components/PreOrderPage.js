@@ -4,7 +4,6 @@ import Nav from './Nav';
 import ShopifyBuyButton from './ShopifyBuy';
 
 import Footer from './Footer';
-import CarouselModal from './CarouselModal';
 
 const PreOrderPage = () => {
     return(
@@ -18,7 +17,6 @@ const PreOrderPage = () => {
                 
                     <br></br>
                     <div className="buyButton">
-                        <CarouselModal />
 
                         <h2>" PRE-FACE "</h2>
                         <h3 className='description'>Drop shoulder. 100% cotton tee. Made in Los Angeles, designed in Toronto. Statement piece.</h3>
@@ -31,7 +29,7 @@ const PreOrderPage = () => {
                 </div>
                 <aside>
                         <Countdown 
-                        countdownTimestampMs={1695000090000}/>
+                        countdownTimestampMs={1694300090000}/>
                 </aside>
             </section>
             <Footer />

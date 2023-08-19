@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="social-icons">
-        <Link to="https://www.tiktok.com/@n0faceclub" target="_blank" className="social-icon">
+        <Link to="https://www.tiktok.com/@_nofaceclub" target="_blank" className="social-icon">
           <img src={tiktok} alt="TikTok" />
         </Link>
-        <Link to="https://www.instagram.com/n0faceclub/" target="_blank" className="social-icon">
+        <Link to="https://www.instagram.com/_nofaceclub/" target="_blank" className="social-icon">
           <img src={IG} alt="Instagram" />
         </Link>
       </div>
