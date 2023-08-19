@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import productImg1 from "../assets/productShot.jpg";
 import productImg2 from "../assets/productShot2.jpg";
 
@@ -6,6 +6,18 @@ const CarouselModal = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);  // Add this line
+
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        // Cleanup when unmounting the component
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isModalOpen]);
 
     const images = [
         productImg1,
