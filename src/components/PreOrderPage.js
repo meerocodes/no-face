@@ -21,7 +21,6 @@ const PreOrderPage = () => {
                         <h2>" PRE-FACE "</h2>
                         <h3 className='description'>Drop shoulder. 100% cotton tee. Made in Los Angeles, designed in Toronto. Statement piece.</h3>
                         <h3 className='price'>60.00</h3>
-                        <h4>UNITS SOLD: 53/100</h4>
 
                         <ShopifyBuyButton productId="6959503802465" />
                     </div>
