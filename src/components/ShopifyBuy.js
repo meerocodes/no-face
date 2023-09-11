@@ -84,7 +84,7 @@ const ShopifyBuyButton = ({ productId }) => {
                 },
               },
               text: {
-                button: 'PRE  ORDER',
+                button: 'BUY',
 
               },
             },
