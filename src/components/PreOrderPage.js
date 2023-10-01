@@ -2,26 +2,26 @@ import tShirt from '../assets/noFace3dRender-compressed.gif';
 import Countdown from './CountDown';
 import Nav from './Nav';
 import ShopifyBuyButton from './ShopifyBuy';
-// import EmailModal from './EmailModal';
+import EmailModal from './EmailModal';
 
 import { useEffect, useState } from 'react';
 import Footer from './Footer';
 
 const PreOrderPage = () => {
-    // const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
-    // useEffect(() => {
-    //     // Check if the modal has been shown before
-    //     if (!localStorage.getItem('modalShown')) {
-    //         const timer = setTimeout(() => {
-    //             setShowModal(true);
-    //             // Set the item in localStorage so we know the modal has been shown
-    //             localStorage.setItem('modalShown', 'true');
-    //         }, 6000); // 6 seconds
+    useEffect(() => {
+        // Check if the modal has been shown before
+        if (!localStorage.getItem('modalShown')) {
+            const timer = setTimeout(() => {
+                setShowModal(true);
+                // Set the item in localStorage so we know the modal has been shown
+                localStorage.setItem('modalShown', 'true');
+            }, 6000); // 6 seconds
 
-    //         return () => clearTimeout(timer); // Cleanup the timer if the component is unmounted.
-    //     }
-    // }, []);
+            return () => clearTimeout(timer); // Cleanup the timer if the component is unmounted.
+        }
+    }, []);
 
     return(
         <>
@@ -50,9 +50,9 @@ const PreOrderPage = () => {
                 </aside>
             </section>
             <Footer />
-            {/* {showModal && <EmailModal isOpen={showModal} onClose={() => setShowModal(false)} />} */}
+            {showModal && <EmailModal isOpen={showModal} onClose={() => setShowModal(false)} />}
         </>
-    )
+    ) 
 }
 
 export default PreOrderPage;
