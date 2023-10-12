@@ -73,15 +73,21 @@ const AllProductPageBuyButton = () => {
                     "color": "#ffffff"
                   },
                   "button": {
-                    "color": "#f9f9f9",
-                    ":hover": {
-                      "color": "#f9f9f9",
-                      "background-color": "#ce0812"
+                    'font-size': '1.1rem',
+                    "text-align":'center',
+                    width:'300px',
+                    color: 'white',
+                    'background-color': '#E50914',
+                    'font-weight': '900',
+                    border: '1.1px solid #fcb4b4',
+                    ':hover': {
+                      color: '#E50914',
+                      'background-color': 'white',
                     },
-                    "background-color": "#e50914",
-                    ":focus": {
-                      "background-color": "#ce0812"
-                    }
+                    'box-shadow': '0 0 0px #fcb4b4',
+                    ':focus': {
+                      'background-color': '#ce0812',
+                    },
                   },
                   "price": {
                     "color": "#f5f5f5"
@@ -288,6 +294,17 @@ const AllProductPageBuyButton = () => {
                     "color": "#ff0000",
                     "border-color": "#ff0000"
                   }
+                },
+              },
+              option: {
+                styles: {
+                  select: {
+                    'margin-inline-start':'0',
+                    'background-color': '#000',
+                    color: '#fff',
+                    'font-size': '18px',
+                    border: '.1px solid #fcb4b4',
+                  },
                 },
               },
           },
