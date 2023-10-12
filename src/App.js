@@ -5,7 +5,7 @@ import PreOrderPage from './components/PreOrderPage';
 import LandingPage from './components/LandingPage';
 import Error from './components/Error';
 import About from './components/About';
-
+import ProductPage from './components/AllProductPage'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/*' element={<Error/>}/>
         <Route path='/About' element={<About/>}/>
-
+        <Route path='Products' element={<ProductPage />}/>
         
       
 
