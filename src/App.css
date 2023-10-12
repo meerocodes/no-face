@@ -223,9 +223,25 @@ button:hover{
   box-shadow: 0 0 20px red;
 }
 
+/* PRODUCT PAGE STYLES***************** */
+.productPage{
+  min-height: 100vh;
+
+}
+
+.productPage h3 {
+  font-family: "Space";
+  color: #b6b6b6;
+}
+.productPage .wrapper {
+  padding-top: 50px;
+  width: 95%;
+  height: 100%;
+}
 
 
-/* PREORDER PAGE STYLES */
+
+/* PREORDER PAGE STYLES ************/
 .preOrder{
   min-height: 90vh;
 
